@@ -31,10 +31,9 @@ public class StadiumFeeModel extends AbstractFeeModel {
             }
         }
         return totalFee;
-//        return IntervalFeeUtil.calculateIntervalFee(intervalFeeList,parkingTime);
     }
 
-    public List<IntervalFee> getCostModel(VehicleType vehicleType){
+    protected List<IntervalFee> getCostModel(VehicleType vehicleType){
         return this.vehicleTypeIntervalFeeMap.get(vehicleType);
     }
 

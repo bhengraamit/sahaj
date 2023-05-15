@@ -18,7 +18,8 @@ public class ParkingReceipt {
     }
 
     private int getIncrementedReceiptNumber(){
-        return ++currentReceiptNumber;
+        currentReceiptNumber =  NumberGeneratorUtil.getIncrementedNumber(currentReceiptNumber);
+        return currentReceiptNumber;
     }
 
     @Override

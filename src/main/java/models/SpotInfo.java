@@ -4,6 +4,10 @@ import models.VehicleType;
 
 import java.util.LinkedList;
 
+/**
+ * SpotInfo basically handles the resource management of spots.
+ * It maintains a freeSpots list which keeps all the unparked spots eventually.
+ */
 public class SpotInfo {
     private int maxNumberOfSpots;
     private int currentSpotNumber;

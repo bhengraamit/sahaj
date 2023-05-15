@@ -15,11 +15,8 @@ public class ParkingTicket {
     }
 
     private int getIncrementedTicketNumber(){
-        return ++currentTicketNumber;
-    }
-
-    public int getTicketNumber() {
-        return ticketNumber;
+        currentTicketNumber =  NumberGeneratorUtil.getIncrementedNumber(currentTicketNumber);
+        return currentTicketNumber;
     }
 
     public int getSpotNumber() {

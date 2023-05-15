@@ -3,6 +3,9 @@ package models;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
+/**
+ * Parking Time basically store the duration of the parking time in terms of days/hours/mins
+ */
 public class ParkingTime {
     private long days;
     private long hours;

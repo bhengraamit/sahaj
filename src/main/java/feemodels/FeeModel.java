@@ -5,6 +5,6 @@ import models.VehicleType;
 
 public interface FeeModel {
 
-    public Number calculateCost(VehicleType vehicleType, ParkingTime parkingTime);
+    public Number calculateCost(VehicleType vehicleType, ParkingTime parkingTime) throws Exception;
 
 }

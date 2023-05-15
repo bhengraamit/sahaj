@@ -1,9 +1,9 @@
 # Sahaj Parking Lot Assignment
 
-##Brief Overview of how classes are connected with each other
+Brief Overview of how classes are connected with each other
 
 
-###Interfaces
+## Interfaces
 
 - FeeModel
 - ParkingLot
@@ -21,4 +21,6 @@
 
 ## Tests
 - Tests are written based on the test cases given in the problem statement
+- ParkingLotTest is the only test class which covers all the test cases
+- You can run the command - "mvn clean compile test" to see the output of testcases.
                                 

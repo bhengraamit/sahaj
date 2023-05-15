@@ -22,7 +22,7 @@ public class GenericParkingLot extends AbstractParkingLot {
     public ParkingTicket parkVehicle(VehicleType vehicleType, LocalDateTime startTime) throws Exception {
         SpotInfo spotInfo =  vehicleTypeSpots.get(vehicleType);
         if(spotInfo == null){
-            throw new Exception("This vehicle type is not supported");
+            throw new Exception("This vehicle type is not supported "+vehicleType);
         }
         Integer availableSpot  = spotInfo.getAvailableSpot();
         if(availableSpot != null){

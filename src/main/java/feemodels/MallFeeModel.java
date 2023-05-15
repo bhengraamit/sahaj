@@ -14,12 +14,8 @@ public class MallFeeModel extends AbstractFeeModel {
         this.vehicleTypeCostMap = vehicleTypeCostMap;
     }
 
-    public Number calculateCostImpl(VehicleType vehicleType, ParkingTime parkingTime){
-        Number perHourCost = vehicleTypeCostMap.get(vehicleType);
-        if(perHourCost == null){
-            //TODO: throw exception
-            return null;
-        }
+    protected Number calculateCostImpl(VehicleType vehicleType, ParkingTime parkingTime){
+        Number perHourCost = getCostModel(vehicleType);
         int perHourCostInt = perHourCost.intValue();
         return (perHourCostInt * parkingTime.getHours()) + (parkingTime.getMinutes() > 0 ? perHourCostInt : 0);
     }

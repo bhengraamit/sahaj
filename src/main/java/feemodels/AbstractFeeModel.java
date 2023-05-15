@@ -5,16 +5,15 @@ import models.VehicleType;
 
 public abstract class AbstractFeeModel implements FeeModel {
 
-    public Number calculateCost(VehicleType vehicleType, ParkingTime parkingTime){
+    public Number calculateCost(VehicleType vehicleType, ParkingTime parkingTime) throws Exception {
         Object costModel = getCostModel(vehicleType);
         if(costModel == null){
-            //TODO: throw exception
-            return null;
+            throw new Exception("Cost model doesn't exist for "+vehicleType);
         }
         return calculateCostImpl(vehicleType,parkingTime);
     }
 
-    public abstract Object getCostModel(VehicleType vehicleType);
+    protected abstract Object getCostModel(VehicleType vehicleType);
 
     protected abstract Number calculateCostImpl(VehicleType vehicleType, ParkingTime parkingTime);
 }
